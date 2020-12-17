@@ -1,4 +1,4 @@
-package com.emp.model;
+package com.practice.demo.original.modal.emp;
 
 import java.util.*;
 import java.sql.*;
@@ -10,7 +10,7 @@ import javax.sql.DataSource;
 
 public class EmpJNDIDAO implements EmpDAO_interface {
 
-	// ¤@­ÓÀ³¥Îµ{¦¡¤¤,°w¹ï¤@­Ó¸ê®Æ®w ,¦@¥Î¤@­ÓDataSource§Y¥i
+	// ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½,ï¿½wï¿½ï¿½@ï¿½Ó¸ï¿½Æ®w ,ï¿½@ï¿½Î¤@ï¿½ï¿½DataSourceï¿½Yï¿½i
 	private static DataSource ds = null;
 	static {
 		try {
@@ -178,7 +178,7 @@ public class EmpJNDIDAO implements EmpDAO_interface {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				// empVo ¤]ºÙ¬° Domain objects
+				// empVo ï¿½]ï¿½Ù¬ï¿½ Domain objects
 				empVO = new EmpVO();
 				empVO.setEmpno(rs.getInt("empno"));
 				empVO.setEname(rs.getString("ename"));
@@ -236,7 +236,7 @@ public class EmpJNDIDAO implements EmpDAO_interface {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				// empVO ¤]ºÙ¬° Domain objects
+				// empVO ï¿½]ï¿½Ù¬ï¿½ Domain objects
 				empVO = new EmpVO();
 				empVO.setEmpno(rs.getInt("empno"));
 				empVO.setEname(rs.getString("ename"));

@@ -1,4 +1,4 @@
-package com.dept.model;
+package com.practice.demo.original.modal.dept;
 
 import java.util.List;
 import java.util.Set;

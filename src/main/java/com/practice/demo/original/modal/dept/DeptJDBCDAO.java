@@ -1,4 +1,4 @@
-package com.dept.model;
+package com.practice.demo.original.modal.dept;
 
 import java.util.*;
 import java.sql.*;
@@ -124,23 +124,23 @@ public class DeptJDBCDAO implements DeptDAO_interface {
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, userid, passwd);
 
-			// 1¡´³]©w©ó pstm.executeUpdate()¤§«e
+			// 1ï¿½ï¿½ï¿½]ï¿½wï¿½ï¿½ pstm.executeUpdate()ï¿½ï¿½ï¿½e
 			con.setAutoCommit(false);
 
-			// ¥ý§R°£­û¤u
+			// ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½u
 			pstmt = con.prepareStatement(DELETE_EMPs);
 			pstmt.setInt(1, deptno);
 			updateCount_EMPs = pstmt.executeUpdate();
-			// ¦A§R°£³¡ªù
+			// ï¿½Aï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			pstmt = con.prepareStatement(DELETE_DEPT);
 			pstmt.setInt(1, deptno);
 			pstmt.executeUpdate();
 
-			// 2¡´³]©w©ó pstm.executeUpdate()¤§«á
+			// 2ï¿½ï¿½ï¿½]ï¿½wï¿½ï¿½ pstm.executeUpdate()ï¿½ï¿½ï¿½ï¿½
 			con.commit();
 			con.setAutoCommit(true);
-			System.out.println("§R°£³¡ªù½s¸¹" + deptno + "®É,¦@¦³­û¤u" + updateCount_EMPs
-					+ "¤H¦P®É³Q§R°£");
+			System.out.println("ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½" + deptno + "ï¿½ï¿½,ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½u" + updateCount_EMPs
+					+ "ï¿½Hï¿½Pï¿½É³Qï¿½Rï¿½ï¿½");
 			
 			// Handle any driver errors
 		} catch (ClassNotFoundException e) {
@@ -150,7 +150,7 @@ public class DeptJDBCDAO implements DeptDAO_interface {
 		} catch (SQLException se) {
 			if (con != null) {
 				try {
-					// 3¡´³]©w©ó·í¦³exceptionµo¥Í®É¤§catch°Ï¶ô¤º
+					// 3ï¿½ï¿½ï¿½]ï¿½wï¿½ï¿½ï¿½exceptionï¿½oï¿½Í®É¤ï¿½catchï¿½Ï¶ï¿½ï¿½ï¿½
 					con.rollback();
 				} catch (SQLException excep) {
 					throw new RuntimeException("rollback error occured. "
@@ -197,7 +197,7 @@ public class DeptJDBCDAO implements DeptDAO_interface {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				// deptVO ¤]ºÙ¬° Domain objects
+				// deptVO ï¿½]ï¿½Ù¬ï¿½ Domain objects
 				deptVO = new DeptVO();
 				deptVO.setDeptno(rs.getInt("deptno"));
 				deptVO.setDname(rs.getString("dname"));
@@ -364,30 +364,30 @@ public class DeptJDBCDAO implements DeptDAO_interface {
 
 		DeptJDBCDAO dao = new DeptJDBCDAO();
 
-		// ·s¼W
+		// ï¿½sï¿½W
 //		DeptVO deptVO1 = new DeptVO();
-//		deptVO1.setDname("»s³y³¡");
-//		deptVO1.setLoc("¤¤°ê¦¿¦è");
+//		deptVO1.setDname("ï¿½sï¿½yï¿½ï¿½");
+//		deptVO1.setLoc("ï¿½ï¿½ï¿½ê¦¿ï¿½ï¿½");
 //		dao.insert(deptVO1);
 
-		// ­×§ï
+		// ï¿½×§ï¿½
 //		DeptVO deptVO2 = new DeptVO();
 //		deptVO2.setDeptno(10);
-//		deptVO2.setDname("°]°È³¡2");
-//		deptVO2.setLoc("»OÆW¥x¥_2");
+//		deptVO2.setDname("ï¿½]ï¿½È³ï¿½2");
+//		deptVO2.setLoc("ï¿½Oï¿½Wï¿½xï¿½_2");
 //		dao.update(deptVO2);
 
-		// §R°£
+		// ï¿½Rï¿½ï¿½
 //		dao.delete(30);
 
-		// ¬d¸ß
+		// ï¿½dï¿½ï¿½
 //		DeptVO deptVO3 = dao.findByPrimaryKey(10);
 //		System.out.print(deptVO3.getDeptno() + ",");
 //		System.out.print(deptVO3.getDname() + ",");
 //		System.out.println(deptVO3.getLoc());
 //		System.out.println("---------------------");
 
-		// ¬d¸ß³¡ªù
+		// ï¿½dï¿½ß³ï¿½ï¿½ï¿½
 		List<DeptVO> list = dao.getAll();
 		for (DeptVO aDept : list) {
 			System.out.print(aDept.getDeptno() + ",");
@@ -396,7 +396,7 @@ public class DeptJDBCDAO implements DeptDAO_interface {
 			System.out.println();
 		}
 		
-		// ¬d¸ß¬Y³¡ªùªº­û¤u
+		// ï¿½dï¿½ß¬Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½u
 		Set<EmpVO> set = dao.getEmpsByDeptno(10);
 		for (EmpVO aEmp : set) {
 			System.out.print(aEmp.getEmpno() + ",");

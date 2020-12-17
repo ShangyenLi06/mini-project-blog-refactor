@@ -1,4 +1,4 @@
-package com.dept.model;
+package com.practice.demo.original.modal.dept;
 
 import java.util.*;
 import com.emp.model.EmpVO;
@@ -9,6 +9,6 @@ public interface DeptDAO_interface {
           public void delete(Integer deptno);
           public DeptVO findByPrimaryKey(Integer deptno);
 	      public List<DeptVO> getAll();
-	      //¬d¸ß¬Y³¡ªùªº­û¤u(¤@¹ï¦h)(¦^¶Ç Set)
+	      //ï¿½dï¿½ß¬Yï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½u(ï¿½@ï¿½ï¿½h)(ï¿½^ï¿½ï¿½ Set)
 	      public Set<EmpVO> getEmpsByDeptno(Integer deptno);
 }

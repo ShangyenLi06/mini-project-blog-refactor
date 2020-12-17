@@ -1,5 +1,5 @@
 
-                                          --�إߪ���: EMP2 �M DEPT2--
+                                          /**建立表格**/
 ----------------------------------------------------------------------------------------------------------------------------
 alter session set deferred_segment_creation=false;
 
@@ -22,10 +22,10 @@ NOMAXVALUE
 NOCYCLE
 NOCACHE;
 
-INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'�]�ȳ�','�O�W�x�_');
-INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'��o��','�O�W�s��');
-INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'�~�ȳ�','����ì�');
-INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'�ͺ޳�','����W��');
+INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'財務部','台灣台北');
+INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'研發部','台灣新竹');
+INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'業務部','美國紐約');
+INSERT INTO DEPT2 VALUES (dept2_seq.NEXTVAL,'生管部','中國上海');
 
 
 

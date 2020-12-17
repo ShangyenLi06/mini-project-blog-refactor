@@ -5,14 +5,14 @@ NOMAXVALUE
 NOCYCLE
 NOCACHE;
 
-�d�ߥثe���椤���ϥΤ�sequence
+查詢目前表個中有使用中sequence:
  SELECT * FROM USER_SEQUENCES;
 
-�R��sequence:
+刪除sequence:
  DROP SEQUENCE emp2_seq;
  
-�����Τ@�շs����:
+取用一組新的值:
  SELECT emp2_seq.NEXTVAL FROM DUAL;
 
-�o���ثe�ϥΨ�X�� :
+得知目前使用到幾號 :
  SELECT emp2_seq.CURRVAL FROM DUAL;

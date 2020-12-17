@@ -1,4 +1,4 @@
-package com.dept.model;
+package com.practice.demo.original.modal.dept;
 
 public class DeptVO  implements java.io.Serializable{
 	private Integer deptno;

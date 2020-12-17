@@ -1,4 +1,4 @@
-package com.emp.model;
+package com.practice.demo.original.modal.emp;
 import java.sql.Date;
 
 public class EmpVO implements java.io.Serializable{

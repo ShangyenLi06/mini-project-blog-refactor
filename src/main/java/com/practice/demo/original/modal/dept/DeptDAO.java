@@ -1,4 +1,4 @@
-package com.dept.model;
+package com.practice.demo.original.modal.dept;
 
 import java.util.*;
 import java.sql.*;
@@ -12,7 +12,7 @@ import com.emp.model.EmpVO;
 
 public class DeptDAO implements DeptDAO_interface {
 
-	// ¤@­ÓÀ³¥Îµ{¦¡¤¤,°w¹ï¤@­Ó¸ê®Æ®w ,¦@¥Î¤@­ÓDataSource§Y¥i
+	// ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½,ï¿½wï¿½ï¿½@ï¿½Ó¸ï¿½Æ®w ,ï¿½@ï¿½Î¤@ï¿½ï¿½DataSourceï¿½Yï¿½i
 	private static DataSource ds = null;
 	static {
 		try {
@@ -125,29 +125,29 @@ public class DeptDAO implements DeptDAO_interface {
 
 			con = ds.getConnection();
 
-			// 1¡´³]©w©ó pstm.executeUpdate()¤§«e
+			// 1ï¿½ï¿½ï¿½]ï¿½wï¿½ï¿½ pstm.executeUpdate()ï¿½ï¿½ï¿½e
 			con.setAutoCommit(false);
 
-			// ¥ý§R°£­û¤u
+			// ï¿½ï¿½ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½u
 			pstmt = con.prepareStatement(DELETE_EMPs);
 			pstmt.setInt(1, deptno);
 			updateCount_EMPs = pstmt.executeUpdate();
-			// ¦A§R°£³¡ªù
+			// ï¿½Aï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			pstmt = con.prepareStatement(DELETE_DEPT);
 			pstmt.setInt(1, deptno);
 			pstmt.executeUpdate();
 
-			// 2¡´³]©w©ó pstm.executeUpdate()¤§«á
+			// 2ï¿½ï¿½ï¿½]ï¿½wï¿½ï¿½ pstm.executeUpdate()ï¿½ï¿½ï¿½ï¿½
 			con.commit();
 			con.setAutoCommit(true);
-			System.out.println("§R°£³¡ªù½s¸¹" + deptno + "®É,¦@¦³­û¤u" + updateCount_EMPs
-					+ "¤H¦P®É³Q§R°£");
+			System.out.println("ï¿½Rï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½sï¿½ï¿½" + deptno + "ï¿½ï¿½,ï¿½@ï¿½ï¿½ï¿½ï¿½ï¿½u" + updateCount_EMPs
+					+ "ï¿½Hï¿½Pï¿½É³Qï¿½Rï¿½ï¿½");
 			
 			// Handle any SQL errors
 		} catch (SQLException se) {
 			if (con != null) {
 				try {
-					// 3¡´³]©w©ó·í¦³exceptionµo¥Í®É¤§catch°Ï¶ô¤º
+					// 3ï¿½ï¿½ï¿½]ï¿½wï¿½ï¿½ï¿½exceptionï¿½oï¿½Í®É¤ï¿½catchï¿½Ï¶ï¿½ï¿½ï¿½
 					con.rollback();
 				} catch (SQLException excep) {
 					throw new RuntimeException("rollback error occured. "
@@ -193,7 +193,7 @@ public class DeptDAO implements DeptDAO_interface {
 			rs = pstmt.executeQuery();
 
 			while (rs.next()) {
-				// deptVO ¤]ºÙ¬° Domain objects
+				// deptVO ï¿½]ï¿½Ù¬ï¿½ Domain objects
 				deptVO = new DeptVO();
 				deptVO.setDeptno(rs.getInt("deptno"));
 				deptVO.setDname(rs.getString("dname"));

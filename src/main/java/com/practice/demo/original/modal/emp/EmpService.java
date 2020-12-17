@@ -1,4 +1,4 @@
-package com.emp.model;
+package com.practice.demo.original.modal.emp;
 
 import java.util.List;
 
