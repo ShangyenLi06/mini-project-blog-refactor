@@ -1,0 +1,3 @@
+$(function(){
+    selectPage.init($(".mainContainer"));
+});
