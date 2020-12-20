@@ -8,8 +8,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = {"com.practice.demo.evis.domain"})
-@EntityScan(basePackages = {"com.practice.demo.evis.model"})
+@EnableJpaRepositories(basePackages = {"com.practice.demo.evis.model"})
+@EntityScan(basePackages = {"com.practice.demo.evis.domain"})
 @EnableTransactionManagement
 public class SideProjectBlogRefactorApplication {
 

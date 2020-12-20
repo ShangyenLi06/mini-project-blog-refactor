@@ -1,42 +1,25 @@
 package com.practice.demo.evis.domain.dept;
 
+import lombok.Data;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
+@Data
 @Table(name="DEPT2")
 public class DeptModel implements java.io.Serializable {
-    private Integer deptno;
-    private String dname;
-    private String loc;
 
     @Id
     @Column(name="deptno", nullable = false)
-    public Integer getDeptno() {
-        return deptno;
-    }
-
-    public void setDeptno(Integer deptno) {
-        this.deptno = deptno;
-    }
+    public String deptno;
 
     @Column(name="dname", nullable = false)
-    public String getDname() {
-        return dname;
-    }
-
-    public void setDname(String dname) {
-        this.dname = dname;
-    }
+    private String dname;
 
     @Column(name="loc", nullable = true)
-    public String getLoc() {
-        return loc;
-    }
+    private String loc;
 
-    public void setLoc(String loc) {
-        this.loc = loc;
-    }
 }
