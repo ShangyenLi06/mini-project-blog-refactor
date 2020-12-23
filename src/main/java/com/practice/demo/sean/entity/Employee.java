@@ -12,18 +12,18 @@ import lombok.Data;
 @Entity
 @Table(name= "EMPLOYEE")
 public class Employee implements java.io.Serializable {
-	@Column
+	@Column(name = "EMPNO")
 	private Integer empno;
-	@Column
+	@Column(name = "ENAME")
 	private String ename;
-	@Column
+	@Column(name = "JOB")
 	private String job;
-	@Column
+	@Column(name = "HIREDATE")
 	private Date hiredate;
-	@Column
+	@Column(name = "SAL")
 	private Double sal;
-	@Column
+	@Column(name = "COMM")
 	private Double comm;
-	@Column
+	@Column(name = "DEPTNO")
 	private Integer deptno;
 }
