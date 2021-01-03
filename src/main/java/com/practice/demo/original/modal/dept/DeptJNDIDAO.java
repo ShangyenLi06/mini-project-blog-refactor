@@ -8,7 +8,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-import com.emp.model.EmpVO;
+import com.practice.demo.original.modal.emp.EmpVO;
 
 public class DeptJNDIDAO implements DeptDAO_interface {
 

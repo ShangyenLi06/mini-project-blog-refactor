@@ -3,7 +3,7 @@ package com.practice.demo.original.modal.dept;
 import java.util.*;
 import java.sql.*;
 
-import com.emp.model.EmpVO;
+import com.practice.demo.original.modal.emp.EmpVO;
 
 public class DeptJDBCDAO implements DeptDAO_interface {
 	String driver = "oracle.jdbc.driver.OracleDriver";

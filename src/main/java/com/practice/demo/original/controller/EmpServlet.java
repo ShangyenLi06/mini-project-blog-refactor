@@ -6,7 +6,7 @@ import java.util.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import com.emp.model.*;
+import com.practice.demo.original.modal.emp.*;
 
 public class EmpServlet extends HttpServlet {
 

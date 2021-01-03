@@ -2,7 +2,7 @@ package com.practice.demo.original.modal.dept;
 
 import java.util.List;
 import java.util.Set;
-import com.emp.model.EmpVO;
+import com.practice.demo.original.modal.emp.EmpVO;
 
 public class DeptService {
 

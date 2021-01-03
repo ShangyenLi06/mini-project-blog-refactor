@@ -1,7 +1,7 @@
 package com.practice.demo.original.modal.dept;
 
 import java.util.*;
-import com.emp.model.EmpVO;
+import com.practice.demo.original.modal.emp.EmpVO;
 
 public interface DeptDAO_interface {
 	      public void insert(DeptVO deptVO);
