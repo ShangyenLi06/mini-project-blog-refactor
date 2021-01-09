@@ -8,6 +8,6 @@ import io.swagger.annotations.Api;
 @Api(tags="empController" ,description="員工相關功能api")
 @RestController
 @RequestMapping("/demo/emp")
-public class empController {
+public class EmpController {
 
 }

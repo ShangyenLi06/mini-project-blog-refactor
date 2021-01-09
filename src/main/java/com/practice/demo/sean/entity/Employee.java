@@ -2,16 +2,17 @@ package com.practice.demo.sean.entity;
 
 import java.sql.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name= "EMPLOYEE")
 public class Employee implements java.io.Serializable {
+
+    @Id
 	@Column(name = "EMPNO")
 	private Integer empno;
 	@Column(name = "ENAME")
@@ -24,6 +25,9 @@ public class Employee implements java.io.Serializable {
 	private Double sal;
 	@Column(name = "COMM")
 	private Double comm;
-	@Column(name = "DEPTNO")
-	private Integer deptno;
+
+	@ManyToOne
+    @JoinColumn(name = "DEPTNO")
+    @JsonIgnore
+	private Department department;
 }
