@@ -16,6 +16,7 @@ public class Department implements java.io.Serializable {
 
     @Id
 	@Column(name = "DEPTNO")
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer deptno;
 	@Column(name = "DNAME")
 	private String dname;
@@ -23,6 +24,5 @@ public class Department implements java.io.Serializable {
 	private String loc;
 
 	@OneToMany(mappedBy = "department", cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
-    @JsonIgnoreProperties("department")
     private List<Employee> employees;
 }

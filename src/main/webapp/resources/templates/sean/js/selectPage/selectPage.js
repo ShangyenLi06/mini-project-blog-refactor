@@ -57,6 +57,7 @@ var selectPage = (function () {
         setJqueryMap($container);
         initTitle();
         initContent();
+        findAllEmpNoList();
     };
     return {
         init: init

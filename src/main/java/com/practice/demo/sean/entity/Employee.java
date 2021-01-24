@@ -14,6 +14,7 @@ public class Employee implements java.io.Serializable {
 
     @Id
 	@Column(name = "EMPNO")
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer empno;
 	@Column(name = "ENAME")
 	private String ename;
