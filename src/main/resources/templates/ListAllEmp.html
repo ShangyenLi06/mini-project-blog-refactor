@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ListAllEmp.html</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h4>Try to use Thymeleaf to get the emp data</h4>
+    <table th:each="empVO : ${allEmps}">
+        <tr>
+            <th>empNo</th>
+            <th>empName</th>
+        </tr>
+        <tr>
+            <td th:text="${empVO.empno}"></td>
+            <td th:text="${empVO.ename}"></td>
+        </tr>
+    </table>
+</div>
+
+
+<!--    <c:forEach var="empVO" items="${list}" begin="<%=pageIndex%>" end="<%=pageIndex+rowsPerPage-1%>">-->
+
+<!--       -->
+<!--            <td>${empVO.job}</td>-->
+<!--            <td>${empVO.hiredate}</td>-->
+<!--            <td>${empVO.sal}</td>-->
+<!--            <td>${empVO.comm}</td>-->
+<!--            <td>${empVO.deptno}</td>-->
+<!--            <td>-->
+<!--                <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/emp/emp.do" style="margin-bottom: 0px;">-->
+<!--                    <input type="submit" value="修改">-->
+<!--                    <input type="hidden" name="empno" value="${empVO.empno}">-->
+<!--                    <input type="hidden" name="action" value="getOne_For_Update"></FORM>-->
+<!--            </td>-->
+<!--            <td>-->
+<!--                <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/emp/emp.do" style="margin-bottom: 0px;">-->
+<!--                    <input type="submit" value="刪除">-->
+<!--                    <input type="hidden" name="empno" value="${empVO.empno}">-->
+<!--                    <input type="hidden" name="action" value="delete"></FORM>-->
+<!--            </td>-->
+<!--        </tr>-->
+<!--    </c:forEach>-->
+<!--</table>-->
+
+</body>
+</html>

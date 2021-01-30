@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LayoutTemplate</title>
+</head>
+<body>
+    <div th:include="components/header :: header(title='${title}')"></div>
+    <div layout:fragment="content"></div>
+</body>
+</html>
