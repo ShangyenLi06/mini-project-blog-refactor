@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>LayoutTemplate</title>
-</head>
-<body>
-    <div th:include="components/header :: header(title='${title}')"></div>
-    <div layout:fragment="content"></div>
-</body>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="en"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.ultraq.net.nz/thymeleaf/layout ">
+    <head>
+        <meta charset="UTF-8">
+        <title>LayoutTemplate</title>
+    </head>
+    <body>
+        <div th:include="components/header :: header(title='${title}')"></div>
+        <div layout:fragment="content"></div>
+    </body>
 </html>

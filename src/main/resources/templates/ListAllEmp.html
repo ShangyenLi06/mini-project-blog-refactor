@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <title>ListAllEmp.html</title>
 </head>
 <body>
-<div layout:fragment="content">
+<div layout:fragment="content" th:unless="${#lists.isEmpty(allEmps)}">
     <h4>Try to use Thymeleaf to get the emp data</h4>
-    <table th:each="empVO : ${allEmps}">
-        <tr>
-            <th>empNo</th>
-            <th>empName</th>
-        </tr>
-        <tr>
-            <td th:text="${empVO.empno}"></td>
-            <td th:text="${empVO.ename}"></td>
-        </tr>
+    <table>
+        <tbody>
+            <tr>
+                <th>empNo</th>
+                <th>empName</th>
+            </tr>
+            <tr th:each="empData : ${allEmps}">
+                <td th:text="${empData.empno}"></td>
+                <td th:text="${empData.ename}"></td>
+            </tr>
+        </tbody>
     </table>
 </div>
 

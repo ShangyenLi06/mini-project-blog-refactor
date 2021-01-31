@@ -1,8 +1,6 @@
 package com.practice.demo.evis.domain;
 
-import com.practice.demo.evis.domain.DeptModel;
 import lombok.Data;
-import lombok.NonNull;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -14,31 +12,25 @@ import java.sql.Date;
 public class EmpModel implements Serializable {
 
     @Id
-    @NonNull
-    @Column(name = "empno")
+    @Column(name = "EMPNO", nullable = false)
     private Integer empno;
 
-    @NonNull
-    @Column(name = "ename")
+    @Column(name = "ENAME")
     private String ename;
 
-    @NonNull
-    @Column(name = "job")
+    @Column(name = "JOB")
     private String job;
 
-    @NonNull
-    @Column(name = "hiredate")
+    @Column(name = "HIREDATE")
     private Date hiredate;
 
-    @NonNull
-    @Column(name = "sal")
+    @Column(name = "SAL")
     private Double sal;
 
-    @NonNull
-    @Column(name = "comm")
+    @Column(name = "COMM")
     private Double comm;
 
     @ManyToOne
-    @JoinColumn(name = "DEPT2")
+    @JoinColumn(name = "DEPTNO", nullable = false)
     private DeptModel deptModel;
 }

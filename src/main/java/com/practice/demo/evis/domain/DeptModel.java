@@ -1,7 +1,6 @@
 package com.practice.demo.evis.domain;
 
 import lombok.Data;
-import lombok.NonNull;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,19 +10,17 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@Table(name="DEPT2")
+@Table(name = "DEPT2")
 public class DeptModel implements Serializable {
 
     @Id
-    @NonNull
-    @Column(name="DEPTNO")
-    public String deptno = "";
+    @Column(name = "DEPTNO")
+    public String deptno;
 
-    @NonNull
-    @Column(name="DNAME")
-    public String dname = "";
+    @Column(name = "DNAME", nullable = false)
+    public String dname;
 
-    @Column(name="LOC")
+    @Column(name = "LOC", nullable = false)
     public String loc;
 
 }

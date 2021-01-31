@@ -1,8 +1,10 @@
 package com.practice.demo.evis.controller;
 
+import com.practice.demo.evis.constants.Constants;
 import com.practice.demo.evis.domain.DeptModel;
 import com.practice.demo.evis.service.DeptService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,7 +27,7 @@ public class DeptController {
         model.addAttribute("firstDept", allDept.stream().map(dept -> dept.dname)
                 .findFirst().orElse(""));
 
-        return "HelloWorld";
+        return Constants.Templates.HELLO_WORLD;
     }
 
     @RequestMapping(value = "/all", method = RequestMethod.GET)
@@ -34,7 +36,7 @@ public class DeptController {
         final List<DeptModel> allDept = deptService.getAllDept();
         model.addAttribute("allDept", allDept.stream().map(dept -> dept.dname).collect(Collectors.toList()));
 
-        return "HelloWorld";
+        return Constants.Templates.HELLO_WORLD;
     }
 
     @RequestMapping(value = "/one", method = RequestMethod.GET)
@@ -42,7 +44,7 @@ public class DeptController {
 
         model.addAttribute("selectDept", deptService.getDeptByDeptno(deptno));
 
-        return "HelloWorld";
+        return Constants.Templates.HELLO_WORLD;
     }
 
 }
