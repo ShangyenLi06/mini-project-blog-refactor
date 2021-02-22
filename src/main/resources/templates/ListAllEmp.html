@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html layout:decorator="layout/LayoutTemplate.html" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <title>ListAllEmp.html</title>
 </head>
@@ -11,10 +12,18 @@
             <tr>
                 <th>empNo</th>
                 <th>empName</th>
+                <th>sal</th>
+                <th>hiredate</th>
+                <th>comm</th>
+                <th>deptno</th>
             </tr>
             <tr th:each="empData : ${allEmps}">
                 <td th:text="${empData.empno}"></td>
                 <td th:text="${empData.ename}"></td>
+                <td th:text="${empData.sal}"></td>
+                <td th:text="${empData.hiredate}"></td>
+                <td th:text="${empData.comm}"></td>
+                <td th:text="${empData.dept.deptno}"></td>
             </tr>
         </tbody>
     </table>

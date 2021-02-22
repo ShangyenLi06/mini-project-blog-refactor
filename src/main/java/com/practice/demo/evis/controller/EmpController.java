@@ -17,6 +17,7 @@ public class EmpController {
     @RequestMapping("/all")
     public String getAllEmp(final Model model) {
 
+        model.addAttribute(Constants.Attributes.TITLE, Constants.Templates.LISTALL_EMP);
         model.addAttribute("allEmps", empService.getAllEmp());
         return Constants.Templates.LISTALL_EMP;
     }

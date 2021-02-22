@@ -5,9 +5,11 @@
     <head>
         <meta charset="UTF-8">
         <title>LayoutTemplate</title>
+        <link rel="stylesheet" th:href="@{/resources/css/table_style.css}"/>
     </head>
     <body>
-        <div th:include="components/header :: header(title='${title}')"></div>
+        <!--/*@thymesVar id="title" type="java.lang.String"*/-->
+        <div th:include="components/header :: header(title=${title})"></div>
         <div layout:fragment="content"></div>
     </body>
 </html>
